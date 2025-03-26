@@ -1,0 +1,29 @@
+/* SearchBar.module.css */
+.searchContainer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .searchInput {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+  }
+  
+  .searchButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgb(30,215,97,1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .searchButton:hover {
+    background-color: rgb(30,215,97,0.8);
+  }
+  
