@@ -1,5 +1,7 @@
 import styles from "./searchBar.module.css";
 
+import Button from "./ui/button";
+
 export default function SearchBar() {
     return (
         <div className={styles.searchContainer}>
@@ -11,12 +13,7 @@ export default function SearchBar() {
             // onChange={handleChange}
             className={styles.searchInput} // Apply CSS Module class
           />
-          <button
-            type="submit"
-            className={styles.searchButton} // Apply CSS Module class
-          >
-            Search
-          </button>
+          <Button>Search</Button>
         </form>
       </div>
     )
