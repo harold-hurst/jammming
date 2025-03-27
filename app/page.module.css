@@ -1,0 +1,40 @@
+#containerDiv {
+    margin: 0 auto;
+}
+  
+
+  /* For small devices and above (≥576px) */
+  @media (min-width: 576px) {
+    #containerDiv {
+      max-width: 540px; /* Similar to Bootstrap's default sm container width */
+    }
+  }
+  
+  /* For medium devices and above (≥768px) */
+  @media (min-width: 768px) {
+    #containerDiv {
+      max-width: 720px; /* Similar to Bootstrap's default md container width */
+    }
+  }
+  
+  /* For large devices and above (≥992px) */
+  @media (min-width: 992px) {
+    #containerDiv {
+      max-width: 960px; /* Similar to Bootstrap's default lg container width */
+    }
+  }
+  
+  /* For extra large devices and above (≥1200px) */
+  @media (min-width: 1200px) {
+    #containerDiv {
+      max-width: 1140px; /* Similar to Bootstrap's default xl container width */
+    }
+  }
+  
+  /* For extra extra large devices and above (≥1400px) */
+  @media (min-width: 1400px) {
+    #containerDiv {
+      max-width: 1320px; /* Similar to Bootstrap's default xxl container width */
+    }
+  }
+  

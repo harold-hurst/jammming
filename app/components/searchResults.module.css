@@ -1,0 +1,19 @@
+.resultItem {
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr);
+    padding: 10px 16px;
+    grid-gap: 16px;
+    margin-bottom: 16px;
+
+    /* set height of auto added rows (all of them) */
+    grid-auto-rows: 56px;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+
+.resultItem:hover {
+    background-color: rgba(30, 215, 98, 0.502);
+}
+/* .resultItem > div {
+    
+} */
