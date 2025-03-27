@@ -1,0 +1,16 @@
+#header {
+    color: white;
+    background-color: var(--headerColour);
+    display: flex;
+    justify-content: center;  /* Centers text horizontally */
+    align-items: center;      /* Centers text vertically */
+    height: 10vh;       
+}
+
+#header h1 {
+    cursor: pointer;
+}
+
+#header span {
+    color: var(--spotifyGreen);
+}
