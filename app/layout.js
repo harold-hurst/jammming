@@ -1,14 +1,16 @@
 import "./globals.css";
 
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import { Rubik } from 'next/font/google'
 
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
+// const inter = Inter({
+//   subsets: ['latin'],
+//   display: 'swap',
+// })
 
-const rubik = Rubik()
+const rubik = Rubik({
+  weight: '400'
+})
 
 export const metadata = {
   title: "Jammming",
