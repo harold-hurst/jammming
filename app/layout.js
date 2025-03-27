@@ -9,7 +9,8 @@ import { Rubik } from 'next/font/google'
 // })
 
 const rubik = Rubik({
-  weight: '400'
+  subsets: ['latin'],
+  weight: ['400','900']
 })
 
 export const metadata = {
