@@ -23,7 +23,7 @@
 
 .playlistItem {
     display: grid;
-    grid-template-columns: auto repeat(3, 1fr);
+    grid-template-columns: auto repeat(3, 1fr) auto;
     padding: 10px 16px;
     grid-gap: 16px;
     margin-bottom: 16px;
@@ -47,6 +47,9 @@
     align-items: center;      /* Centers text vertically */
 }
 
+.playlistItem button {
+    align-self: center;
+}
 
 
 

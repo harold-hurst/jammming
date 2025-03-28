@@ -2,12 +2,12 @@
 
 import styles from './button.module.css';
 
-export default function Button({ children, onClick }) {
+export default function Button({ children, handleClick }) {
   return (
     <button
       type="submit"
       className={styles.searchButton}
-      onClick={onClick}
+      onClick={handleClick}
     >
       {children}
     </button>

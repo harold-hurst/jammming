@@ -1,11 +1,11 @@
 import styles from "./playlist.module.css";
 
 import Button from "./ui/button";
-export default function Playlist({ playlistTracks }) {
+export default function Playlist({ playlistTracks, removeTrack }) {
   return (
     <div className={styles.playlistContainer}>
       <span>Create Playlist</span>
-      <input type="text"></input>
+      <input type="text" placeholder="Playlist Name"></input>
 
       {playlistTracks.length ? (
         playlistTracks.map((track, index) => (
@@ -14,6 +14,13 @@ export default function Playlist({ playlistTracks }) {
             <div>{track.song}</div>
             <div>{track.artist}</div>
             <div>{track.album}</div>
+            <Button
+              handleClick={() => {
+                removeTrack(index);
+              }}
+            >
+              -
+            </Button>
           </div>
         ))
       ) : (

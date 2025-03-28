@@ -16,7 +16,7 @@ export default function SearchResults({ searchResults, addTrack }) {
             <div>{result.album}</div>
             <div className={styles.addButton}>
               <Button
-                onClick={() => {
+                handleClick={() => {
                   addTrack(index);
                 }}
               >

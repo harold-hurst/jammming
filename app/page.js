@@ -13,7 +13,8 @@ import Tracklist from "./components/tracklist";
 import Track from "./components/track";
 
 export default function Home() {
-  // search results from Spotify
+
+  // SEARCH RESULTS FROM SPOTIFY
   const [searchResults, setSearchResults] = useState([
     {
       artist: "Drake",
@@ -32,15 +33,20 @@ export default function Home() {
     },
   ]);
 
-  // playlist being added
+  // PLAYLIST BEING CREATED
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
+  // add a track to the current playlist being made
   const addTrack = (indexToAdd) => {
     setPlaylistTracks([...playlistTracks, searchResults[indexToAdd]]);
-
   };
 
-  // saved playlists
+  const removeTrack = (indexToRemove) => {
+    setPlaylistTracks(playlistTracks.filter((track,i) => i !== indexToRemove))
+  }
+
+
+  // SAVED PLAYLISTS
   const [savedPlaylists, setSavedPlaylists] = useState([]);
 
   return (
@@ -58,7 +64,7 @@ export default function Home() {
 
           <SearchResults searchResults={searchResults} addTrack={addTrack} />
 
-          <Playlist playlistTracks={playlistTracks} />
+          <Playlist playlistTracks={playlistTracks} removeTrack={removeTrack} />
 
 
 
