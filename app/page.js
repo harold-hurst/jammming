@@ -33,17 +33,26 @@ export default function Home() {
     },
   ]);
 
+  // SAVED PLAYLISTS
+  const [savedPlaylists, setSavedPlaylists] = useState([]);
+
   // PLAYLIST BEING CREATED
   const [playlistName, setPlaylistName] = useState("");
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
+  // save playlist name to state using controlled components
   const handlePlaylistNameChange = (e) => {
     setPlaylistName(e.target.value);
   };
 
+  // save new playlist into savedPlaylists
   const handlePlaylistSave = (e) => {
     e.preventDefault();
-    alert("the playlist being saved is " + playlistName);
+    const newPlaylist = {
+      name: playlistName,
+      tracks: playlistTracks,
+    };
+    setSavedPlaylists([...savedPlaylists, newPlaylist]);
   };
 
   // add a track to the current playlist being made
@@ -54,16 +63,6 @@ export default function Home() {
   // remove a track from the current playlist being made
   const removeTrack = (indexToRemove) => {
     setPlaylistTracks(playlistTracks.filter((track, i) => i !== indexToRemove));
-  };
-
-  // SAVED PLAYLISTS
-  const [savedPlaylists, setSavedPlaylists] = useState([]);
-
-  // add current playlist to saved playlists
-  // need to get playlist name from input field using Controlled Components to manage the form input fields
-  const addPlaylist = () => {
-    const newPlaylist = {};
-    setSavedPlaylists([...savedPlaylists, newPlaylist]);
   };
 
   return (
