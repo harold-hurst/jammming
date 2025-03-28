@@ -13,6 +13,7 @@ import Tracklist from "./components/tracklist";
 import Track from "./components/track";
 
 export default function Home() {
+  // search results from Spotify
   const [searchResults, setSearchResults] = useState([
     {
       artist: "Drake",
@@ -31,29 +32,16 @@ export default function Home() {
     },
   ]);
 
-  const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      artist: "Drake",
-      song: "Headlines",
-      album: "Take Care (Delux)",
-    },
-    {
-      artist: "AJ Tracy, Jorja Smith",
-      song: "Crush (feat. Jorja Smoth)",
-      album: "",
-    },
-  ]);
+  // playlist being added
+  const [playlistTracks, setPlaylistTracks] = useState([]);
 
   const addTrack = (indexToAdd) => {
-    // setPlaylistTracks(searchResults[indexToAdd]);
-    alert('index to add ' + indexToAdd);
-  }
+    setPlaylistTracks([...playlistTracks, searchResults[indexToAdd]]);
 
-  const clearPlaylist = () => {
-    setPlaylistTracks([]);
-  }
+  };
 
-
+  // saved playlists
+  const [savedPlaylists, setSavedPlaylists] = useState([]);
 
   return (
     <>
@@ -63,9 +51,18 @@ export default function Home() {
 
         <div id={styles.contentContainer}>
 
-          <SearchResults searchResults={searchResults} addTrack={addTrack}/>
+
+
+
+
+
+          <SearchResults searchResults={searchResults} addTrack={addTrack} />
 
           <Playlist playlistTracks={playlistTracks} />
+
+
+
+
 
         </div>
         <Tracklist />

@@ -2,6 +2,7 @@
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 6px;
     font-weight: 700;
+    padding: 0 0 16px 0;
 }
 
 .playlistContainer span {
@@ -32,7 +33,7 @@
     border-radius: 6px;
     justify-content: space-between;
     border: 1px solid transparent;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .playlistItem:hover {
@@ -40,7 +41,11 @@
 }
 
 
-
+#buttonContainer {
+    display: flex;
+    justify-content: center;  /* Centers text horizontally */
+    align-items: center;      /* Centers text vertically */
+}
 
 
 

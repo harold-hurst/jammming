@@ -3,7 +3,6 @@ import styles from "./searchResults.module.css";
 import Button from "./ui/button";
 
 export default function SearchResults({ searchResults, addTrack }) {
-
   return (
     <>
       <div className={styles.resultsContainer}>
@@ -16,7 +15,13 @@ export default function SearchResults({ searchResults, addTrack }) {
             <div>{result.artist}</div>
             <div>{result.album}</div>
             <div className={styles.addButton}>
-              <Button onClick={addTrack}>+</Button>
+              <Button
+                onClick={() => {
+                  addTrack(index);
+                }}
+              >
+                +
+              </Button>
             </div>
           </div>
         ))}
