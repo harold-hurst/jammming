@@ -36,15 +36,6 @@ export default function Home() {
   // SAVED PLAYLISTS
   const [savedPlaylists, setSavedPlaylists] = useState([]);
 
-  // PLAYLIST BEING CREATED
-  const [playlistName, setPlaylistName] = useState("");
-  const [playlistTracks, setPlaylistTracks] = useState([]);
-
-  // save playlist name to state using controlled components
-  const handlePlaylistNameChange = (e) => {
-    setPlaylistName(e.target.value);
-  };
-
   // save new playlist into savedPlaylists
   const handlePlaylistSave = (e) => {
     e.preventDefault();
@@ -53,6 +44,29 @@ export default function Home() {
       tracks: playlistTracks,
     };
     setSavedPlaylists([...savedPlaylists, newPlaylist]);
+  };
+
+  // change name of an existing saved playlist
+  const handlePlaylistNameUpdate = (indexToChange, newName) => {
+    let playListToUpdate = savedPlaylists[indexToChange];
+    playListToUpdate.name = newName;
+
+    setSavedPlaylists((prevPlaylists) =>
+      prevPlaylists.map((playlist, index) =>
+        index === indexToChange
+          ? { ...playlist, ...playListToUpdate }
+          : playlist
+      )
+    );
+  };
+
+  // PLAYLIST BEING CREATED
+  const [playlistName, setPlaylistName] = useState("");
+  const [playlistTracks, setPlaylistTracks] = useState([]);
+
+  // save playlist name to state using controlled components
+  const handlePlaylistNameChange = (e) => {
+    setPlaylistName(e.target.value);
   };
 
   // add a track to the current playlist being made
@@ -81,7 +95,10 @@ export default function Home() {
             handlePlaylistSave={handlePlaylistSave}
           />
         </div>
-        <SavedPlaylists savedPlaylists={savedPlaylists} />
+        <SavedPlaylists
+          savedPlaylists={savedPlaylists}
+          handlePlaylistNameUpdate={handlePlaylistNameUpdate}
+        />
         <Tracklist />
         <Track />
       </div>
