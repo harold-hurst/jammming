@@ -1,0 +1,17 @@
+.playlistItem {
+    display: flex;
+    gap: 16px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+
+
+
+    border-radius: 6px;
+    
+    border: 1px solid transparent;
+    font-weight: 400;
+}
+
+.playlistItem:hover {
+    color: var(--spotifyGreen);
+}
