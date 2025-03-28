@@ -1,5 +1,6 @@
 #containerDiv {
     margin: 0 auto;
+    padding: 0 16px;
 }
   
 
@@ -38,3 +39,8 @@
     }
   }
   
+#contentContainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 16px;
+}

@@ -4,7 +4,9 @@
     display: flex;
     justify-content: center;  /* Centers text horizontally */
     align-items: center;      /* Centers text vertically */
-    height: 10vh;       
+    padding: 30px 0;
+    min-height: 10vh;       
+
 }
 
 #header h1 {

@@ -1,21 +1,25 @@
 import styles from "./searchResults.module.css";
 
-export default function SearchResults({ searchResults }) {
+import Button from "./ui/button";
+
+export default function SearchResults({ searchResults, addTrack }) {
+
   return (
     <>
-      <div>
-      
-          {searchResults.map((result, index) => (
+      <div className={styles.resultsContainer}>
+        <span>Results</span>
 
-              <div key={index} className={styles.resultItem}>
-                <div>{index + 1}</div>
-                <div>{result.song}</div>
-                <div>{result.artist}</div>
-                <div>{result.album}</div>
-              </div>
-            
-          ))}
-        
+        {searchResults.map((result, index) => (
+          <div key={index} className={styles.resultItem}>
+            <div>{index + 1}</div>
+            <div>{result.song}</div>
+            <div>{result.artist}</div>
+            <div>{result.album}</div>
+            <div className={styles.addButton}>
+              <Button onClick={addTrack}>+</Button>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

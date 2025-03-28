@@ -1,9 +1,10 @@
-.resultsContainer {
+.playlistContainer {
     background-color: rgb(255, 255, 255, 0.1);
     border-radius: 6px;
+    font-weight: 700;
 }
 
-.resultsContainer span {
+.playlistContainer span {
     margin: 16px;
     font-weight: 700;
     font-size: 20px;
@@ -11,9 +12,17 @@
 
 }
 
-.resultItem {
+
+
+
+
+
+
+
+
+.playlistItem {
     display: grid;
-    grid-template-columns: auto repeat(3, 1fr) auto;
+    grid-template-columns: auto repeat(3, 1fr);
     padding: 10px 16px;
     grid-gap: 16px;
     margin-bottom: 16px;
@@ -26,10 +35,13 @@
     font-weight: 500;
 }
 
-.resultItem:hover {
+.playlistItem:hover {
     color: var(--spotifyGreen);
 }
 
-.addButton {
-    align-self: center;
-}
+
+
+
+
+
+
